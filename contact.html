@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahosi Mobile | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <header>
+        <div class="logo">
+            <img src="images/mahosi accessories logo.png" alt="Mahosi Mobile Accessories Logo" width="100">
+        </div>
+       <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="promotions.html">Specials</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+
+        <!-- Location 1 -->
+        <section class="location">
+            <h3>Location 1: Main Store - Soweto</h3>
+            <p>123 Vilakazi Street<br>Orlando West, Soweto<br>Johannesburg, 1804</p>
+            <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm | Saturday 10am - 2pm</p>
+            <p><em>[Interactive Google Map to be added in Part 3]</em></p>
+        </section>
+
+        <!-- Location 2 (required: more than 1 location) -->
+        <section class="location">
+            <h3>Location 2: Pickup Point - Braamfontein</h3>
+            <p>45 Juta Street<br>Braamfontein, Johannesburg<br>2001</p>
+            <p><strong>Hours:</strong> Monday - Friday, 10am - 4pm (Pickup only)</p>
+            <p><em>[Interactive Google Map to be added in Part 3]</em></p>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm" action="#" method="post">
+                <label for="contactName">Full Name:</label>
+                <input type="text" id="contactName" name="contactName" required>
+
+                <label for="contactEmail">Email Address:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="product-interest">Product Interest:</label>
+                <select id="product-interest" name="product-interest">
+                    <option value="cases">Phone Cases</option>
+                    <option value="chargers">Chargers</option>
+                    <option value="earphones">Earphones</option>
+                    <option value="screen">Screen Protectors</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="whatsapp-contact">
+            <h3>Or WhatsApp Us</h3>
+            <p>Click the button below to chat with us directly on WhatsApp</p>
+            <a href="https://wa.me/27123456789" class="whatsapp-button">WhatsApp: 012 345 6789</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mahosi Mobile Accessories. All rights reserved.</p>
+        <p>Follow us: Instagram | Facebook</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
