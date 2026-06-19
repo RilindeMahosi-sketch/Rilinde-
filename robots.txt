@@ -1,0 +1,11 @@
+# robots.txt for Mahosi Mobile Accessories
+
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://rilindemahosi-sketch.github.io/Rilinde-/sitemap.xml
