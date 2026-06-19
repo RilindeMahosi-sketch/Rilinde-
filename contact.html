@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahosi Mobile | Contact</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Mahosi Mobile | Contact - Visit Our Stores</title>
+    <meta name="description" content="Contact Mahosi Mobile Accessories. Visit our Soweto store or Braamfontein pickup point. Send us a message or chat with us on WhatsApp.">
+    <meta name="keywords" content="contact Mahosi Mobile, mobile accessories Soweto, phone accessories Braamfontein, WhatsApp mobile accessories">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Leaflet CSS for maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +40,8 @@
             <h3>Location 1: Main Store - Soweto</h3>
             <p>123 Vilakazi Street<br>Orlando West, Soweto<br>Johannesburg, 1804</p>
             <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm | Saturday 10am - 2pm</p>
-            <p><em>[Interactive Google Map to be added in Part 3]</em></p>
+            <!-- Leaflet Map for Location 1 -->
+            <div id="map1" class="leaflet-map" style="height: 250px; margin: 10px 0;"></div>
         </section>
 
         <!-- Location 2 - Pickup Point in Braamfontein (required: more than 1 location) -->
@@ -39,24 +49,27 @@
             <h3>Location 2: Pickup Point - Braamfontein</h3>
             <p>45 Juta Street<br>Braamfontein, Johannesburg<br>2001</p>
             <p><strong>Hours:</strong> Monday - Friday, 10am - 4pm (Pickup only)</p>
-            <p><em>[Interactive Google Map to be added in Part 3]</em></p>
+            <!-- Leaflet Map for Location 2 -->
+            <div id="map2" class="leaflet-map" style="height: 250px; margin: 10px 0;"></div>
         </section>
 
         <!-- Contact form for customer enquiries -->
+        <!-- Form validation will be handled by JavaScript in Part 3 -->
         <section class="contact-form">
             <h3>Send Us a Message</h3>
             <form id="contactForm" action="#" method="post">
                 <label for="contactName">Full Name:</label>
-                <input type="text" id="contactName" name="contactName" required>
+                <input type="text" id="contactName" name="contactName" required minlength="2" placeholder="Enter your full name">
 
                 <label for="contactEmail">Email Address:</label>
-                <input type="email" id="contactEmail" name="contactEmail" required>
+                <input type="email" id="contactEmail" name="contactEmail" required placeholder="Enter your email address">
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
 
                 <label for="product-interest">Product Interest:</label>
                 <select id="product-interest" name="product-interest">
+                    <option value="">Select a product...</option>
                     <option value="cases">Phone Cases</option>
                     <option value="chargers">Chargers</option>
                     <option value="earphones">Earphones</option>
@@ -64,7 +77,10 @@
                 </select>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Type your message here..."></textarea>
+
+                <div id="contact-error" class="error-message"></div>
+                <div id="contact-success" class="success-message"></div>
 
                 <button type="submit">Send Message</button>
             </form>
@@ -83,6 +99,8 @@
         <p>Follow us: Instagram | Facebook</p>
     </footer>
 
+    <!-- Leaflet JavaScript for maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
